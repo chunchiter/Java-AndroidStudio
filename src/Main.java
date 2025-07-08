@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        //variables - little empty buckets
+        String myName = "Rafael";
+        String lastName = "Castañon";
+
+        //integers
+        int myAge = 24;
+
+        //Byte - small type
+        byte myByte = 127;
+
+        //Short 2x byte
+        short myShort = 128;
+
+        //Float 1.34, 3.14,.....
+        float piNum = 3.14f;
+
+        //Double
+        double myDouble = 23.89;
+
+        //Char == character ( &, $, @, ., 0..)
+        char myChar = 'h';
+
+        //Boolean = true or false, 1 or 0
+        boolean myBool = true;
+
+        System.out.println("My char is: " + myChar + " and my bool is " + myBool);
+
+        //System.out.println("Hi my name is " + lastName + " and I am " + myAge + " years old ");
     }
 }
