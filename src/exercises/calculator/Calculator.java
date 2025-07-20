@@ -9,6 +9,11 @@ public class Calculator {
             return;
         }
 
+        if(!(operation.equals("1")) || (operation.equals("2")) || (operation.equals("3")) || (operation.equals("4"))){
+            System.out.println("Opción no válida");
+            return;
+        }
+
         int a = number();
         int b = number();
 
@@ -25,8 +30,6 @@ public class Calculator {
             case "4":
                 print(div(a, b));
                 break;
-            default:
-                System.out.println("Opción no válida");
         }
     }
 

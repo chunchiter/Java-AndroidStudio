@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String operation;
 
-        while (true) {
+        do {
             System.out.println("\nCALCULATOR");
             System.out.println("Ingresa una opción:");
             System.out.println("1. Suma");
@@ -22,8 +22,7 @@ public class Main {
 
             calculator.calculate(operation);
 
-            if (operation.equals("5")) break;
-        }
+        } while (!operation.equals("5"));
 
         scanner.close();
     }
