@@ -19,10 +19,10 @@ public class MethodsnParameters {
     //Return and integer
     public static int addNums(int a, int b){
         int result;
-        result = a +b;
+        result = a + b;
         //System.out.println(" Sum = " +  (a + b));
 
-        return result; //(a+b)
+        return result; //(a + b)
     }
 
     //Return a string
