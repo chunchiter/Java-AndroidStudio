@@ -8,25 +8,31 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         NoOps noOps = new NoOps();
 
-        while (true) {
+        int i = 0; //operaciones realizadas
+
+        while (i < 2) {
             System.out.print("Ingresa una operación: ");
             String input = scanner.nextLine().trim();
 
             if (input.equalsIgnoreCase("Out")) {
                 System.out.println("Bye Bye!");
-                break;
+                return;
             }
 
             try {
                 double result = noOps.parseAndCalculate(input);
                 noOps.setLastResult(result);
                 noOps.print(result);
+                i++;
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
+
+        System.out.println("Bye Bye!");
     }
 }
+
 
 
 /* Metodo

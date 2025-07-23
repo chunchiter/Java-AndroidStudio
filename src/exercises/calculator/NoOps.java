@@ -1,13 +1,10 @@
 package exercises.calculator;
 
-import java.util.Scanner;
-
 public class NoOps {
-    private final Scanner scanner = new Scanner(System.in);
     private Double lastResult = null;
 
     double parseAndCalculate(String input) {
-        String[] tokens = input.split(" " ); //need space # +*-/ #
+        String[] tokens = input.split(" ");
 
         double a, b;
         String op;
@@ -51,8 +48,7 @@ public class NoOps {
 
     public double div(double a, double b) {
         if (b == 0) {
-            System.out.println("Error: división entre cero");
-            return 0;
+            throw new IllegalArgumentException("División entre cero");
         }
         return a / b;
     }
