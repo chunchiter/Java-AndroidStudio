@@ -4,6 +4,34 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Calculator. Escribe 'Out' para terminar.");
+        Scanner scanner = new Scanner(System.in);
+        NoOps noOps = new NoOps();
+
+        while (true) {
+            System.out.print("Ingresa una operación: ");
+            String input = scanner.nextLine().trim();
+
+            if (input.equalsIgnoreCase("Out")) {
+                System.out.println("Bye Bye!");
+                break;
+            }
+
+            try {
+                double result = noOps.parseAndCalculate(input);
+                noOps.setLastResult(result);
+                noOps.print(result);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
+}
+
+
+/* Metodo
+public class Main {
+    public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         String operation;
@@ -27,3 +55,4 @@ public class Main {
         scanner.close();
     }
 }
+*/
