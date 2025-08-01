@@ -1,3 +1,5 @@
+package course;
+
 public class BasicOperations {
     public static void main(String[] args){
         //Addition = +

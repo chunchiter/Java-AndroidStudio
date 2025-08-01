@@ -1,3 +1,5 @@
+package course;
+
 public class MethodsnParameters {
     public static void main(String[] args){
         myName("Rafael");

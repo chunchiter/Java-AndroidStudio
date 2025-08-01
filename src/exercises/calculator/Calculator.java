@@ -1,15 +1,18 @@
 package exercises.calculator;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public class Calculator {
+    private static final Set<String> VALID_OPERATIONS = Set.of("1", "2", "3", "4");
+
     public void calculate(String operation) {
         if (operation.equals("5")) {
             System.out.println("Obama out!!");
             return;
         }
 
-        if(!operation.equals("1") && !operation.equals("2") && !operation.equals("3") && !operation.equals("4")){
+        if (!VALID_OPERATIONS.contains(operation)) {
             System.out.println("Opción no válida");
             return;
         }
@@ -18,18 +21,10 @@ public class Calculator {
         double b = number();
 
         switch (operation) {
-            case "1":
-                print(add(a, b));
-                break;
-            case "2":
-                print(sub(a, b));
-                break;
-            case "3":
-                print(mult(a, b));
-                break;
-            case "4":
-                print(div(a, b));
-                break;
+            case "1" -> print(add(a, b));
+            case "2" -> print(sub(a, b));
+            case "3" -> print(mult(a, b));
+            case "4" -> print(div(a, b));
         }
     }
 
